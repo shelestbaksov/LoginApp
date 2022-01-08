@@ -9,21 +9,18 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
+    // MARK: - Input
+    var userName: String?
     
-    @IBOutlet var welcomeLabel: UILabel!
+    @IBOutlet private var welcomeLabel: UILabel!
     
-    var welcomeTextLabel: String!
-    
+    // MARK: - View controller lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.isHidden = true
-        welcomeLabel.text = welcomeTextLabel
+        
+        if let userName = userName {
+            welcomeLabel.text = "Welcome, \(userName)!"
+        }
     }
-    
-
-//    @IBAction func logOutButtonPressed() {
-//        navigationController?.popViewController(animated: true)
-//    }
-    
-
 }
