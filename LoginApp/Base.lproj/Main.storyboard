@@ -16,34 +16,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="Kkj-8h-W3i">
-                                <rect key="frame" x="62" y="273" width="290" height="103"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="14" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Gvi-Mc-DLX">
-                                        <rect key="frame" x="0.0" y="0.0" width="290" height="34"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="34" id="gIe-Qa-yrQ"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="14" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="g4m-LL-qLG">
-                                        <rect key="frame" x="0.0" y="69" width="290" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" smartInsertDeleteType="no"/>
-                                    </textField>
-                                </subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="14" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Gvi-Mc-DLX">
+                                <rect key="frame" x="16" y="128" width="382" height="34"/>
                                 <constraints>
-                                    <constraint firstItem="g4m-LL-qLG" firstAttribute="top" secondItem="Gvi-Mc-DLX" secondAttribute="bottom" constant="35" id="2vh-Ib-gXv"/>
-                                    <constraint firstAttribute="width" constant="290" id="OPU-iy-prr"/>
-                                    <constraint firstItem="g4m-LL-qLG" firstAttribute="height" secondItem="Gvi-Mc-DLX" secondAttribute="height" id="rhi-wB-eiB"/>
+                                    <constraint firstAttribute="height" constant="34" id="gIe-Qa-yrQ"/>
                                 </constraints>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="yB6-U7-byw">
-                                <rect key="frame" x="49" y="477" width="325" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="14" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="g4m-LL-qLG">
+                                <rect key="frame" x="16" y="192" width="382" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" smartInsertDeleteType="no"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYA-O5-Z7A">
+                                <rect key="frame" x="16" y="265" width="382" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="7Pw-8q-5Qz"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Log In">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="logInButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oo3-nf-bGq"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="i1b-w9-228">
+                                <rect key="frame" x="16" y="311" width="382" height="31"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sFv-fw-LQ5">
-                                        <rect key="frame" x="0.0" y="0.0" width="149.5" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="187" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Forgot User Name?">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
@@ -53,7 +56,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Dx-3W-jWj">
-                                        <rect key="frame" x="175.5" y="0.0" width="149.5" height="31"/>
+                                        <rect key="frame" x="195" y="0.0" width="187" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Forgot Password?">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
@@ -64,30 +67,23 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYA-O5-Z7A">
-                                <rect key="frame" x="168.5" y="410" width="77.5" height="38"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Log In">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="logInButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oo3-nf-bGq"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Kkj-8h-W3i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="62" id="1ge-AW-GgM"/>
-                            <constraint firstItem="yB6-U7-byw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="49" id="2Gi-xY-4kF"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cYA-O5-Z7A" secondAttribute="trailing" constant="168" id="7lq-7Y-HNB"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yB6-U7-byw" secondAttribute="bottom" constant="354" id="8KF-TI-zcV"/>
-                            <constraint firstItem="cYA-O5-Z7A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="168.5" id="OpJ-GJ-pcZ"/>
-                            <constraint firstItem="cYA-O5-Z7A" firstAttribute="top" secondItem="Kkj-8h-W3i" secondAttribute="bottom" constant="34" id="ZkO-8w-YyA"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kkj-8h-W3i" secondAttribute="trailing" constant="62" id="ahg-OH-qd3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Dx-3W-jWj" secondAttribute="trailing" constant="40" id="dZ1-q4-G3k"/>
-                            <constraint firstItem="yB6-U7-byw" firstAttribute="top" secondItem="cYA-O5-Z7A" secondAttribute="bottom" constant="29" id="spO-eG-muX"/>
-                            <constraint firstItem="Kkj-8h-W3i" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="185" id="xhQ-4L-05P"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gvi-Mc-DLX" secondAttribute="trailing" constant="16" id="0Vf-hu-r8j"/>
+                            <constraint firstItem="cYA-O5-Z7A" firstAttribute="width" secondItem="g4m-LL-qLG" secondAttribute="width" id="3kS-iT-H0j"/>
+                            <constraint firstItem="cYA-O5-Z7A" firstAttribute="centerX" secondItem="Gvi-Mc-DLX" secondAttribute="centerX" id="7wk-cw-U1a"/>
+                            <constraint firstItem="Gvi-Mc-DLX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="BbC-eU-Pwb"/>
+                            <constraint firstItem="Gvi-Mc-DLX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="GYO-6V-coa"/>
+                            <constraint firstItem="g4m-LL-qLG" firstAttribute="height" secondItem="Gvi-Mc-DLX" secondAttribute="height" id="J5O-gI-ZBu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="i1b-w9-228" secondAttribute="trailing" constant="16" id="LSa-xP-NHP"/>
+                            <constraint firstItem="g4m-LL-qLG" firstAttribute="centerX" secondItem="Gvi-Mc-DLX" secondAttribute="centerX" id="VOI-RR-9e4"/>
+                            <constraint firstItem="i1b-w9-228" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="hhb-Uy-mqn"/>
+                            <constraint firstItem="g4m-LL-qLG" firstAttribute="top" secondItem="Gvi-Mc-DLX" secondAttribute="bottom" constant="30" id="mV5-4P-gnf"/>
+                            <constraint firstItem="cYA-O5-Z7A" firstAttribute="top" secondItem="g4m-LL-qLG" secondAttribute="bottom" constant="39" id="mqw-IZ-q2q"/>
+                            <constraint firstItem="g4m-LL-qLG" firstAttribute="width" secondItem="Gvi-Mc-DLX" secondAttribute="width" id="ptc-fc-ATH"/>
+                            <constraint firstItem="i1b-w9-228" firstAttribute="top" secondItem="cYA-O5-Z7A" secondAttribute="bottom" constant="8" symbolic="YES" id="y0K-7L-EDQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nKi-wB-GHe"/>
@@ -99,7 +95,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="395.6521739130435" y="-687.05357142857144"/>
+            <point key="canvasLocation" x="395.625" y="-687.5"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="PGM-t5-rtX">
