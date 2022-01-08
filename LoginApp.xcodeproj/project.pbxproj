@@ -13,6 +13,7 @@
 		40E56ACD2789C21D007A0675 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E56ACB2789C21D007A0675 /* Main.storyboard */; };
 		40E56ACF2789C220007A0675 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40E56ACE2789C220007A0675 /* Assets.xcassets */; };
 		40E56AD22789C220007A0675 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E56AD02789C220007A0675 /* LaunchScreen.storyboard */; };
+		40E56ADA2789D6D9007A0675 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E56AD92789D6D9007A0675 /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		40E56ACE2789C220007A0675 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40E56AD12789C220007A0675 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40E56AD32789C220007A0675 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40E56AD92789D6D9007A0675 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				40E56AC72789C21D007A0675 /* SceneDelegate.swift */,
 				40E56AC92789C21D007A0675 /* ViewController.swift */,
 				40E56ACB2789C21D007A0675 /* Main.storyboard */,
+				40E56AD92789D6D9007A0675 /* WelcomeViewController.swift */,
 				40E56ACE2789C220007A0675 /* Assets.xcassets */,
 				40E56AD02789C220007A0675 /* LaunchScreen.storyboard */,
 				40E56AD32789C220007A0675 /* Info.plist */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				40E56ACA2789C21D007A0675 /* ViewController.swift in Sources */,
+				40E56ADA2789D6D9007A0675 /* WelcomeViewController.swift in Sources */,
 				40E56AC62789C21D007A0675 /* AppDelegate.swift in Sources */,
 				40E56AC82789C21D007A0675 /* SceneDelegate.swift in Sources */,
 			);
