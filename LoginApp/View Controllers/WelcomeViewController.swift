@@ -10,17 +10,15 @@ import UIKit
 class WelcomeViewController: UIViewController {
 
     // MARK: - Input
-    var userName: String?
+    var user: User!
     
     @IBOutlet private var welcomeLabel: UILabel!
     
     // MARK: - View controller lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.isHidden = true
         
-        if let userName = userName {
-            welcomeLabel.text = "Welcome, \(userName)!"
-        }
+        navigationController?.navigationBar.isHidden = true
+        welcomeLabel.text = "Welcome, \(user.name) \(user.surname)!"
     }
 }

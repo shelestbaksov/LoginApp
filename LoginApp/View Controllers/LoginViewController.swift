@@ -7,10 +7,29 @@
 
 import UIKit
 
+
+
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet private var userNameTextField: UITextField!
     @IBOutlet private var passwordTextfield: UITextField!
+    
+    private let user = User.getUserInfo()
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let tabBarVC = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarVC.viewControllers else { return }
+        
+        for viewController in viewControllers {
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.user = user
+            } else if let navigationVC = viewController as? UINavigationController {
+                let aboutMeVC = navigationVC.topViewController as! AboutMeViewController
+                aboutMeVC.user = user
+            }
+        }
+    }
     
     // MARK: - View controller lifecycle
     override func viewDidLoad() {
@@ -19,6 +38,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         setupKeyboardHidingOnViewTap()
         userNameTextField.delegate = self
         passwordTextfield.delegate = self
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     // MARK: - User input
@@ -32,6 +52,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func forgotPasswordButtonPressed() {
         showAlert(title: "Password is", message: "1234")
+    }
+    
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        clearTextFields()
     }
     
     // MARK: - UITextFieldDelegate
@@ -48,16 +72,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.userName = userNameTextField.text
-    }
-    
-    @IBAction func unwind(for segue: UIStoryboardSegue) {
-        clearTextFields()
-    }
-    
     // MARK: - Private implementation
     private func performChecksAndLoginIfNeeded() {
         let clearTextFields: (UIAlertAction) -> () = { [weak self] _ in
@@ -66,8 +80,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         guard
             let userName = userNameTextField.text,
-            !userName.isEmpty,
-            userName == "User"
+            !userName.isEmpty
         else {
             showAlert(
                 title: "Invalid user name or password",
@@ -78,8 +91,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
         guard
             let password = passwordTextfield.text,
-            !password.isEmpty,
-            password == "1234"
+            !password.isEmpty
         else {
             showAlert(
                 title: "Invalid user name or password",
@@ -97,10 +109,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             )
             return
         }
-        
-        performSegue(withIdentifier: "showDetail", sender: self)
+        if userName == user.loginData.userName && password == user.loginData.password {
+            performSegue(withIdentifier: "showDetail", sender: self)
+        }
     }
-    
+       
     private func clearTextFields() {
         userNameTextField.text = ""
         passwordTextfield.text = ""
